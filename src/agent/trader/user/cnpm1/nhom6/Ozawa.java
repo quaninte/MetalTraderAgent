@@ -40,13 +40,17 @@ import agent.ontology.WantTo;
 public class Ozawa extends MariaAgent {
 	
 	// ranges
-	int minPercent = 55;
-	int maxPercent = 145;
-	int percentStep = 5;
+	int minPercent = 75;
+	int maxPercent = 125;
+	int percentStep = 2;
 	int ranges = 5;
 	
 	int upPercentage[] = new int[10000];
 	int downPercentage[] = new int[10000];
+	
+	// Auctions
+	int maxAuctions = 15;
+	int activeAuctions = 0;
 	
 	public AssetBag bag;
 
@@ -80,37 +84,18 @@ public class Ozawa extends MariaAgent {
 		addBehaviour(new RequestMarketPriceBehaviour(this));
 
 		addBehaviour(new UpdateMarketInfoListener());
-		addBehaviour(new TickerBehaviour(this, 500) {
-
-			@Override
-			protected void onTick() {
-				addBehaviour(new CheckBestPriceBehaviour());
-			}
-			
-		});
+		
+		// mua do gia thi truong
+		// each asset
+		for (int i = 0; i < bag.getAssets().size(); i++) {
+			Asset asset = bag.getAssets().get(i);
+			CheckBestPriceOneAssetBehaviour checkPriceOne = new CheckBestPriceOneAssetBehaviour();
+			checkPriceOne.setAsset(asset);
+			addBehaviour(checkPriceOne);
+		}
 	}
 
 	// AGENT BEHAVIOUR
-	
-	/**
-	 * Check best price behaviour
-	 * @author quanmt
-	 *
-	 */
-	class CheckBestPriceBehaviour extends OneShotBehaviour {
-
-		@Override
-		public void action() {
-			// each asset
-			for (int i = 0; i < bag.getAssets().size(); i++) {
-				Asset asset = bag.getAssets().get(i);
-				CheckBestPriceOneAssetBehaviour checkPriceOne = new CheckBestPriceOneAssetBehaviour();
-				checkPriceOne.setAsset(asset);
-				addBehaviour(checkPriceOne);
-			}
-		}
-		
-	}
 	
 	/**
 	 * This behaviour send 10 bids with defined prices range

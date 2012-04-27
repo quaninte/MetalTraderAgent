@@ -13,6 +13,10 @@ public class Asset {
 	public int priceDownTimes = 0;
 	public double changes = 0;
 	
+	// prices
+	double goodSellPrice = 0;
+	double goodBuyPrice = 0;
+	
 	/**
 	 * Constructor setup asset type and amount
 	 * @param type
@@ -60,6 +64,8 @@ public class Asset {
 		} else {
 			this.changes = 0;
 		}
+		
+		Log.updatePrice(type, newPrice);
 		this.price = newPrice;
 		this.bag.agent.slog(
 				"Price Updated:" +
@@ -108,6 +114,22 @@ public class Asset {
 
 	public void setAmount(int amount) {
 		this.amount = amount;
+	}
+
+	public double getGoodSellPrice() {
+		return goodSellPrice;
+	}
+
+	public void setGoodSellPrice(double goodSellPrice) {
+		this.goodSellPrice = goodSellPrice;
+	}
+
+	public double getGoodBuyPrice() {
+		return goodBuyPrice;
+	}
+
+	public void setGoodBuyPrice(double goodBuyPrice) {
+		this.goodBuyPrice = goodBuyPrice;
 	}
 	
 }
