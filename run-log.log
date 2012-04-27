@@ -1,0 +1,1867 @@
+Apr 26, 2012 3:54:08 PM jade.core.Runtime beginContainer
+INFO: ----------------------------------
+    This is JADE 4.1.1 - revision 6532 of 2011/11/18 16:21:34
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+----------------------------------------
+Retrieving CommandDispatcher for platform TestPlatform
+Apr 26, 2012 3:54:09 PM jade.imtp.leap.LEAPIMTPManager initialize
+INFO: Listening for intra-platform commands on address:
+- jicp://10.211.55.2:1099
+
+Apr 26, 2012 3:54:09 PM jade.core.BaseService init
+INFO: Service jade.core.management.AgentManagement initialized
+Apr 26, 2012 3:54:10 PM jade.core.BaseService init
+INFO: Service jade.core.messaging.Messaging initialized
+Apr 26, 2012 3:54:10 PM jade.core.BaseService init
+INFO: Service jade.core.resource.ResourceManagement initialized
+Apr 26, 2012 3:54:10 PM jade.core.BaseService init
+INFO: Service jade.core.mobility.AgentMobility initialized
+Apr 26, 2012 3:54:10 PM jade.core.BaseService init
+INFO: Service jade.core.event.Notification initialized
+Apr 26, 2012 3:54:10 PM jade.mtp.http.HTTPServer <init>
+INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Apr 26, 2012 3:54:10 PM jade.core.messaging.MessagingService boot
+INFO: MTP addresses:
+http://10.211.55.2:7778/acc
+Apr 26, 2012 3:54:10 PM jade.core.AgentContainerImpl joinPlatform
+INFO: --------------------------------------
+Agent container Main-Container@10.211.55.2 is ready.
+--------------------------------------------
+[Starter] [2012/04/26 15:54:10:496] Agent Starter@TestPlatform started.
+[Starter] [2012/04/26 15:54:10:551] Game will run for 5000 ms.
+[Broker] [2012/04/26 15:54:10:576] Agent Broker@TestPlatform started.
+[Bank] [2012/04/26 15:54:10:595] Agent Bank@TestPlatform started.
+[Info] [2012/04/26 15:54:10:601] Agent Info@TestPlatform started.
+[EnviromentTrader1] [2012/04/26 15:54:10:614] Agent EnviromentTrader1@TestPlatform started.
+[EnviromentTrader2] [2012/04/26 15:54:10:625] Agent EnviromentTrader2@TestPlatform started.
+[cnpm1.nhom6.Ozawa.0] [2012/04/26 15:54:10:638] Agent cnpm1.nhom6.Ozawa.0@TestPlatform started.
+cnpm1.nhom6.Ozawa.0@TestPlatform: Start Price + plat - 1000.3993136708027
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 1000.3993136708027
+	Changes: 0.0
+	Up: 0
+	Down: 0
+	Changes from start: 0.0
+cnpm1.nhom6.Ozawa.0@TestPlatform: Start Price + gold - 600.2394401420154
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 600.2394401420154
+	Changes: 0.0
+	Up: 0
+	Down: 0
+	Changes from start: 0.0
+cnpm1.nhom6.Ozawa.0@TestPlatform: Start Price + silv - 99.7880316853234
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 99.7880316853234
+	Changes: 0.0
+	Up: 0
+	Down: 0
+	Changes from start: 0.0
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33013.169207810846
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 87034.71882059223
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36014.366408520924
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 84033.52161988216
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39015.563609231
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 81032.32441917207
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42016.76080994108
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 78031.127218462
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45017.95801065116
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 75029.93001775192
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 55021.96225189415
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 145057.90048226638
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 60023.95882024816
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 140055.9039139124
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 65025.955388602175
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 135053.90734555837
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 70027.9519569562
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 130051.91077720435
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 75029.9485253102
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 125049.91420885034
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5488.341742692787
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14469.264594371893
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5987.281901119404
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13970.324435945276
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6486.222059546021
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13471.38427751866
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6985.162217972638
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12972.444119092042
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7484.102376399255
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12473.503960665425
+[Info] [2012/04/26 15:54:11:754] Current market price:	Platinum Price:	1000.6902972127235	Gold Price:	600.391604126764	Silver Price:	100.03018926463668
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 1000.6902972127235
+	Changes: 0.29098354192080933
+	Up: 1
+	Down: 0
+	Changes from start: 2.9086739459383004E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 600.391604126764
+	Changes: 0.152163984748654
+	Up: 1
+	Down: 0
+	Changes from start: 2.5350547560254455E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 100.03018926463668
+	Changes: 0.24215757931327175
+	Up: 1
+	Down: 0
+	Changes from start: 0.0024267196699190308
+[Broker] [2012/04/26 15:54:11:988] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:11:989] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:11:991] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:073] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33021.53822697202
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 87056.78259838079
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36023.49624760584
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 84054.82457774697
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39025.454268239664
+[Broker] [2012/04/26 15:54:12:098] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 81052.86655711314
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42027.412288873486
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 78050.90853647933
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45029.3703095073
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 75048.9505158455
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 55037.966346699795
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 145100.0930958449
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 60041.417832763414
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 140096.6416097813
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 65044.869318827026
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 135093.19012371768
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 70048.32080489065
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 130089.73863765405
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 75051.77229095426
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 125086.28715159044
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5501.660409555017
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14504.377443372317
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6001.811355878201
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14004.226497049134
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6501.962302201384
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13504.075550725951
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7002.113248524567
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13003.924604402768
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7502.26419484775
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12503.773658079584
+[Broker] [2012/04/26 15:54:12:181] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:266] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:268] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:283] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Deal agreed:
+	 DealId: 0
+	 Seller: EnviromentTrader1@TestPlatform
+	 Buyer: cnpm1.nhom6.Ozawa.0@TestPlatform
+	 Metal: Gold
+	 Quantity: 1
+	 Value: 604.3462743854575
+[Info] [2012/04/26 15:54:12:357] Current market price:	Platinum Price:	999.4306517467697	Gold Price:	600.213954252696	Silver Price:	100.02678666622862
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 999.4306517467697
+	Changes: -1.2596454659537812
+	Up: 1
+	Down: 1
+	Changes from start: -9.682752784772042E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 600.213954252696
+	Changes: -0.17764987406803812
+	Up: 1
+	Down: 1
+	Changes from start: -4.245953800263713E-5
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 100.02678666622862
+	Changes: -0.003402598408058566
+	Up: 1
+	Down: 1
+	Changes from start: 0.002392621408327855
+[Broker] [2012/04/26 15:54:12:374] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:380] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:495] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:577] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33011.76748389828
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 87031.02336664092
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36012.83725516176
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 84029.95359537745
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39013.90702642524
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 81028.88382411396
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42014.97679768872
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 78027.81405285047
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45016.0465689522
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 75026.744281587
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 54968.68584607234
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 144917.44450328161
+[Broker] [2012/04/26 15:54:12:633] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 59965.83910480618
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 139920.29124454776
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 64962.992363540034
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 134923.13798581393
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 69960.14562227388
+[Broker] [2012/04/26 15:54:12:645] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 129925.98472708007
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 74957.29888100774
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 124928.83146834622
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5501.473266642574
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14503.88406660315
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6001.607199973717
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14003.750133272006
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6501.74113330486
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13503.616199940863
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7001.875066636003
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13003.48226660972
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7502.008999967146
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12503.348333278576
+[Broker] [2012/04/26 15:54:12:709] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:795] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:842] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:865] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:12:904] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Info] [2012/04/26 15:54:12:938] Current market price:	Platinum Price:	999.8290454446271	Gold Price:	599.9667892764336	Silver Price:	100.03713220280065
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 999.8290454446271
+	Changes: 0.39839369785738654
+	Up: 2
+	Down: 1
+	Changes from start: -5.700406011706072E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 599.9667892764336
+	Changes: -0.24716497626241107
+	Up: 1
+	Down: 2
+	Changes from start: -4.5423683841450124E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 100.03713220280065
+	Changes: 0.010345536572032188
+	Up: 2
+	Down: 1
+	Changes from start: 0.0024962965324617503
+[Broker] [2012/04/26 15:54:12:971] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:063] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 32998.173410203846
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 86995.18444508286
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 35998.007356586015
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 83995.3504987007
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 38997.84130296818
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 80995.51655231853
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 41997.67524935035
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 77995.68260593637
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 44997.50919573252
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 74995.8486595542
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 54990.59749945449
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 144975.21158947094
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 59989.74272667763
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 139976.0663622478
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 64988.88795390076
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 134976.92113502466
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 69988.0331811239
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 129977.77590780152
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 74987.17840834704
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 124978.6306805784
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5502.042271154036
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14505.384169406094
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6002.227932168039
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14005.198508392092
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6502.413593182042
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13505.012847378088
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7002.599254196046
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13004.827186364084
+[Broker] [2012/04/26 15:54:13:163] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7502.784915210049
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12504.641525350082
+[Broker] [2012/04/26 15:54:13:167] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:214] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:215] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:263] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:266] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:269] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:321] There has been 2 agents miss the deadline of auction for 19 units of Platinum from requester EnviromentTrader2@TestPlatform
+[Broker] [2012/04/26 15:54:13:334] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:401] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:434] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:435] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:501] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Info] [2012/04/26 15:54:13:532] Current market price:	Platinum Price:	1000.7400636297134	Gold Price:	600.3276452858832	Silver Price:	99.77593257498798
+[Broker] [2012/04/26 15:54:13:617] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 1000.7400636297134
+	Changes: 0.9110181850862773
+	Up: 3
+	Down: 1
+	Changes from start: 3.406139471051617E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 600.3276452858832
+	Changes: 0.36085600944966245
+	Up: 2
+	Down: 2
+	Changes from start: 1.469499302595434E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 99.77593257498798
+	Changes: -0.2611996278126725
+	Up: 2
+	Down: 2
+	Changes from start: -1.2124811093161547E-4
+[Broker] [2012/04/26 15:54:13:654] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33018.02049072358
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 87047.50856645308
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36019.658717153
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 84045.87034002366
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39021.29694358241
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 81044.23211359423
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42022.93517001183
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 78042.59388716482
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45024.57339644124
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 75040.9556607354
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 55040.70349963424
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 145107.30922630845
+[Broker] [2012/04/26 15:54:13:702] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 60044.403817782804
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 140103.6089081599
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 65048.10413593137
+[Broker] [2012/04/26 15:54:13:707] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 135099.9085900113
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 70051.80445407995
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 130096.20827186274
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 75055.50477222851
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 125092.50795371417
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5487.676291624339
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14467.510223373256
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5986.555954499278
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13968.630560498317
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6485.435617374218
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13469.750897623377
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6984.315280249159
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12970.871234748436
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7483.194943124098
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12471.991571873497
+[Broker] [2012/04/26 15:54:13:763] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:865] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:985] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:13:986] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:033] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:144] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Info] [2012/04/26 15:54:14:213] Current market price:	Platinum Price:	1000.6911328376965	Gold Price:	600.1949136259327	Silver Price:	99.99317727898043
+[Broker] [2012/04/26 15:54:14:225] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 1000.6911328376965
+	Changes: -0.04893079201690398
+	Up: 3
+	Down: 2
+	Changes from start: 2.9170268602340954E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 600.1949136259327
+	Changes: -0.1327316599505366
+	Up: 2
+	Down: 3
+	Changes from start: -7.418125685332289E-5
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 99.99317727898043
+	Changes: 0.21724470399244922
+	Up: 3
+	Down: 2
+	Changes from start: 0.0020558136100323754
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33010.7202494263
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 87028.26247576025
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36011.69481755597
+[Broker] [2012/04/26 15:54:14:341] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 84027.28790763058
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39012.66938568563
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 81026.31333950092
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42013.64395381529
+[Broker] [2012/04/26 15:54:14:345] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 78025.33877137126
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45014.618521944954
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 75024.3642032416
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 55038.01230607331
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 145100.214261466
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 60041.46797026179
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 140096.7585972775
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 65044.92363445027
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 135093.30293308903
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 70048.37929863876
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 130089.84726890054
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 75051.83496282724
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 125086.39160471206
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5499.624750343924
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14499.010705452161
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5999.590636738825
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13999.044819057259
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6499.556523133728
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13499.078932662358
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6999.522409528629
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12999.113046267456
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7499.488295923532
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12499.147159872553
+[Info] [2012/04/26 15:54:14:375] Focasted trend: Gold 1.7549124047197886.
+[Broker] [2012/04/26 15:54:14:404] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:496] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:512] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:544] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:591] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:702] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Bank] [2012/04/26 15:54:14:717] cnpm1.nhom6.Ozawa.0@TestPlatform has been deduct a penalty for not complete the deal correctly
+[Bank] [2012/04/26 15:54:14:717] cnpm1.nhom6.Ozawa.0@TestPlatform Account:	 Money: 95000.0	 Platinum Quantity: 10	 Gold Quantity: 10	 Silver Quantity: 10
+[Broker] [2012/04/26 15:54:14:739] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Info] [2012/04/26 15:54:14:774] Current market price:	Platinum Price:	999.532627227497	Gold Price:	599.5504292419495	Silver Price:	99.89730892911545
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 999.532627227497
+	Changes: -1.1585056101995406
+	Up: 3
+	Down: 3
+	Changes from start: -8.663405016998693E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 599.5504292419495
+	Changes: -0.6444843839832401
+	Up: 2
+	Down: 4
+	Changes from start: -0.0011478934138398067
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 99.89730892911545
+	Changes: -0.09586834986497195
+	Up: 3
+	Down: 3
+	Changes from start: 0.0010950936895584018
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 32975.27360830722
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 86934.81224008267
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 35973.025754516966
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 83937.06009387293
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 38970.777900726716
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 80939.30794766318
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 41968.53004693647
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 77941.55580145343
+[Broker] [2012/04/26 15:54:14:849] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 44966.28219314621
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 74943.80365524368
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 54974.29449751233
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 144932.23094798706
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 59971.957633649814
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 139934.56781184959
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 64969.6207697873
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 134936.90467571208
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 69967.28390592479
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 129939.2415395746
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 74964.94704206227
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 124941.57840343712
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5494.35199110135
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14485.10979472174
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5993.838535746927
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13985.623250076163
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6493.325080392505
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13486.136705430587
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6992.811625038082
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12986.65016078501
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7492.298169683659
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12487.16361613943
+[Broker] [2012/04/26 15:54:14:892] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:920] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:928] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:951] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:14:961] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester EnviromentTrader2@TestPlatform
+[Broker] [2012/04/26 15:54:14:994] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:040] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:060] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:137] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:164] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:183] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:208] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:280] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:309] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 32975.27360830722
+[Broker] [2012/04/26 15:54:15:311] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 86934.81224008267
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 35973.025754516966
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 83937.06009387293
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 38970.777900726716
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 80939.30794766318
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 41968.53004693647
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 77941.55580145343
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 44966.28219314621
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 74943.80365524368
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 54974.29449751233
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 144932.23094798706
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 59971.957633649814
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 139934.56781184959
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 64969.6207697873
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 134936.90467571208
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 69967.28390592479
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 129939.2415395746
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 74964.94704206227
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 124941.57840343712
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5494.35199110135
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14485.10979472174
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5993.838535746927
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13985.623250076163
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6493.325080392505
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13486.136705430587
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6992.811625038082
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12986.65016078501
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7492.298169683659
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12487.16361613943
+[Info] [2012/04/26 15:54:15:355] Current market price:	Platinum Price:	1000.2905084783599	Gold Price:	612.4509431924637	Silver Price:	100.23086869603958
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ plat
+	Price: 1000.2905084783599
+	Changes: 0.7578812508629653
+	Up: 4
+	Down: 3
+	Changes from start: -1.0876176238416857E-4
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ gold
+	Price: 612.4509431924637
+	Changes: 12.90051395051421
+	Up: 3
+	Down: 4
+	Changes from start: 0.020344386312833862
+cnpm1.nhom6.Ozawa.0@TestPlatform: Price Updated:
+ silv
+	Price: 100.23086869603958
+	Changes: 0.33355976692412526
+	Up: 4
+	Down: 3
+	Changes from start: 0.004437776787828085
+[Broker] [2012/04/26 15:54:15:408] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:409] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:410] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:470] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:486] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:487] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:511] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:547] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:567] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Info] [2012/04/26 15:54:15:698] Final market price:	Platinum Price:	1000.7029473195237	Gold Price:	622.747428622757	Silver Price:	100.05600124506832
+[Bank] [2012/04/26 15:54:15:702] All transaction has been suppended.
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33684.8018755855
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 88805.38676290723
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36747.05659154782
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 85743.13204694491
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39809.31130751014
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 82680.87733098259
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42871.56602347246
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 79618.62261502029
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45933.82073943478
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 76556.36789905796
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 55015.977966309794
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 145042.12372936218
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 60017.4305087016
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 140040.6711869704
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 65018.8830510934
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 135039.2186445786
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 70020.3355934852
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 130037.7661021868
+[Broker] [2012/04/26 15:54:15:908] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 75021.788135877
+[Broker] [2012/04/26 15:54:15:911] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 125036.31355979499
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5512.697778282177
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14533.475960925738
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6013.852121762375
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14032.321617445541
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6515.006465242573
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13531.167273965344
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7016.1608087227705
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13030.012930485145
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7517.315152202968
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12528.858587004946
+[Broker] [2012/04/26 15:54:15:966] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:968] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:970] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:15:972] There has been 2 agents miss the deadline of auction for 14 units of Silver from requester EnviromentTrader2@TestPlatform
+[Broker] [2012/04/26 15:54:15:979] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:030] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:151] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:182] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:189] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:191] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:193] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:194] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:194] There has been 2 agents miss the deadline of auction for 1 units of Silver from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:204] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:208] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:210] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:212] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:214] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:216] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:217] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:232] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:233] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:236] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:237] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:270] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:274] Trader cnpm1.nhom6.Ozawa.0@TestPlatform has reached its limit of max number of 15 active auctions.
+[Broker] [2012/04/26 15:54:16:275] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:276] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:277] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:312] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:324] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:325] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:325] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:345] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:355] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 33684.8018755855
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 88805.38676290723
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 36747.05659154782
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 85743.13204694491
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 39809.31130751014
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 82680.87733098259
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 42871.56602347246
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 79618.62261502029
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 45933.82073943478
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Gold
+	 Quantity: 1
+	 Threshold: 76556.36789905796
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 55015.977966309794
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 145042.12372936218
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 60017.4305087016
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 140040.6711869704
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 65018.8830510934
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 135039.2186445786
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 70020.3355934852
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 130037.7661021868
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 75021.788135877
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Platinum
+	 Quantity: 1
+	 Threshold: 125036.31355979499
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 5512.697778282177
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14533.475960925738
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6013.852121762375
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 14032.321617445541
+[Broker] [2012/04/26 15:54:16:381] There has been 2 agents miss the deadline of auction for 1 units of Gold from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 6515.006465242573
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13531.167273965344
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7016.1608087227705
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 13030.012930485145
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: false
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 7517.315152202968
+cnpm1.nhom6.Ozawa.0@TestPlatform: Request Auction:
+	 Sell: true
+	 Metal: Silver
+	 Quantity: 1
+	 Threshold: 12528.858587004946
+[Broker] [2012/04/26 15:54:16:401] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:463] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:465] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:485] There has been 2 agents miss the deadline of auction for 1 units of Platinum from requester cnpm1.nhom6.Ozawa.0@TestPlatform
+[Broker] [2012/04/26 15:54:16:495] There has been 2 agents miss the deadline of auction for 19 units of Platinum from requester EnviromentTrader2@TestPlatform
+[Broker] [2012/04/26 15:54:16:496] There has been 2 agents miss the deadline of auction for 3 units of Gold from requester EnviromentTrader2@TestPlatform
+[Starter] [2012/04/26 15:54:16:509] cnpm1.nhom6.Ozawa.0@TestPlatform with total asset of 112,235.0638
+	 Final Account:	 Money: 95000.0	 Platinum Quantity: 10	 Gold Quantity: 10	 Silver Quantity: 10
+[Starter] [2012/04/26 15:54:16:509] The winner is cnpm1.nhom6.Ozawa.0@TestPlatform with the total asset of 112,235.0638
+	 Winner Account:
+	 Money: 95000.0
+	 Platinum Quantity: 10
+	 Gold Quantity: 10
+	 Silver Quantity: 10
+[Info] [2012/04/26 15:54:16:532] Agent Info@TestPlatform terminating.
+[EnviromentTrader1] [2012/04/26 15:54:16:538] Agent EnviromentTrader1@TestPlatform terminating.
+[Bank] [2012/04/26 15:54:16:554] Agent Bank@TestPlatform terminating.
+[EnviromentTrader2] [2012/04/26 15:54:16:560] Agent EnviromentTrader2@TestPlatform terminating.
+[cnpm1.nhom6.Ozawa.0] [2012/04/26 15:54:16:565] Agent cnpm1.nhom6.Ozawa.0@TestPlatform terminating.
+[Starter] [2012/04/26 15:54:16:569] Agent Starter@TestPlatform terminating.
+[Broker] [2012/04/26 15:54:16:578] Agent Broker@TestPlatform terminating.
