@@ -27,6 +27,7 @@ import agent.ontology.Bid;
 import agent.ontology.CurrentAccount;
 import agent.ontology.CurrentMarketPrice;
 import agent.ontology.Deal;
+import agent.ontology.Direction;
 import agent.ontology.FutureTrend;
 import agent.ontology.GetAccountInfo;
 import agent.ontology.GetLastDeal;
@@ -36,6 +37,9 @@ import agent.ontology.Metal;
 import agent.ontology.TradingOntology;
 import agent.ontology.WantTo;
 import agent.trader.UserAgent;
+import agent.trader.user.cnpm1.nhom6.Ozawa.RequestAuctionBehaviour;
+import agent.trader.user.cnpm1.nhom6.Ozawa.RequestBuyBehaviour;
+import agent.trader.user.cnpm1.nhom6.Ozawa.RequestSellBehaviour;
 
 public class CaptainAmerica extends MariaAgent {
 
@@ -90,6 +94,7 @@ public class CaptainAmerica extends MariaAgent {
 
 		addBehaviour(new UpdateMarketInfoListener());
 
+		/* Remove bidding behaviour
 		MessageTemplate senderMt = MessageTemplate.MatchSender(mBrokerService);
 		MessageTemplate cfpMt = MessageTemplate.MatchPerformative(ACLMessage.CFP);
 		MessageTemplate acceptMt = MessageTemplate.MatchPerformative(ACLMessage.ACCEPT_PROPOSAL);
@@ -97,65 +102,102 @@ public class CaptainAmerica extends MariaAgent {
 		MessageTemplate mt = MessageTemplate.and(senderMt, MessageTemplate.or(cfpMt, MessageTemplate.or(acceptMt, rejectMt)));
 
 		addBehaviour(new BiddingBehaviour(this, mt));
+		*/
 
-		// This behaviour will have a chance of 50% of sending out request to
-		// buy or sell a random amount of random metal with threshold is set to
-		// market price +/- 10% every 500 ms
-		// Just here to show how a request could be sent to actively sell or buy
-		// metal
-		addBehaviour(new TickerBehaviour(this, 500) {
+	}
+	
+	// Captain actions
 
-			@Override
-			protected void onTick() {
-				// Check the market price first
-				addBehaviour(new RequestMarketPriceBehaviour(myAgent));
-				if (RANDOM.nextInt(2) == 0) {
-					// Wait 500 ms
-					addBehaviour(new WakerBehaviour(myAgent, 500) {
-						@Override
-						protected void onWake() {
-							// TODO: NEEDED TO BE IMPLEMENTED
-							// Start an random auction
+	class SplitAndActionBehaviour extends SequentialBehaviour {
 
-							// Sell or buy
-							boolean wantToSell = RANDOM.nextBoolean();
+		boolean sell;
+		Asset asset;
+		int totalQuantity;
+		double threshold;
+		
+		// Constructor
+		public SplitAndActionBehaviour(Agent myAgent, Asset asset, int quantity, double threshold, boolean sell) {
+			super(myAgent);
+			this.asset = asset;
+			this.totalQuantity = quantity;
+			this.threshold = threshold;
+			this.sell = sell;
+		}
 
-							// Which metal
-							Metal metal = null;
-							// Threshold price
-							double threshold = 0;
-							double mr = RANDOM.nextDouble();
-							if (mr > 0.33) {
-								metal = Metal.PLATINUM;
-								threshold = bag.getAsset("plat").getPrice();
-							} else if (mr > 0.66) {
-								metal = Metal.GOLD;
-								threshold = bag.getAsset("gold").getPrice();
-							} else {
-								metal = Metal.SILVER;
-								threshold = bag.getAsset("silv").getPrice();
-							}
-
-							// How many unit (1 - 10)
-							int quantity = RANDOM.nextInt(10) + 1;
-
-							// Threshold value
-							// -10% if it sell
-							// +10% if it buy
-							// * quantity to have the total value
-							if (wantToSell)
-								threshold = (threshold * (1 - RANDOM.nextDouble() * 0.1)) * quantity;
-							else
-								threshold = (threshold * (1 + RANDOM.nextDouble() * 0.1)) * quantity;
-
-							AuctionRequest auction = new AuctionRequest(new AgentID(getAID().getName()), new WantTo(wantToSell, new Good(metal, quantity)), threshold);
-							addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
-						}
-					});
+		@Override
+		public void onStart() {
+			while (true) {
+				if (totalQuantity == 0) {
+					break;
 				}
+				int quantity = RandomRange.getRandomInteger(6, 10);
+				if (quantity > totalQuantity) {
+					quantity = totalQuantity;
+				}
+				
+				if (sell) {
+					addBehaviour(new RequestSellBehaviour(myAgent, asset, quantity, threshold * 0.95));
+				} else {
+					addBehaviour(new RequestBuyBehaviour(myAgent, asset, quantity, threshold * 1.05));
+				}
+				
+				totalQuantity -= quantity;
 			}
-		});
+		}
+	}
+	
+	/**
+	 * request buy behaviour
+	 */
+	class RequestBuyBehaviour extends SequentialBehaviour {
 
+		Asset asset;
+		int quantity;
+		double threshold;
+		
+		// Constructor
+		public RequestBuyBehaviour(Agent myAgent, Asset asset, int quantity, double threshold) {
+			super(myAgent);
+			this.asset = asset;
+			this.quantity = quantity;
+			this.threshold = threshold;
+		}
+
+		@Override
+		public void onStart() {
+			Good good = new Good(asset.getMetal(), quantity);
+			WantTo wantTo = new WantTo(MariaAgent.BUY, good);
+			
+			AuctionRequest auction = new AuctionRequest(new AgentID(getAID().getName()), wantTo, threshold);
+			addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
+		}
+	}
+	
+	/**
+	 * request sell behaviour
+	 */
+	class RequestSellBehaviour extends SequentialBehaviour {
+
+		Asset asset;
+		int quantity;
+		double threshold;
+		
+		// Constructor
+		public RequestSellBehaviour(Agent myAgent, Asset asset, int quantity, double threshold) {
+			super(myAgent);
+			this.asset = asset;
+			this.quantity = quantity;
+			this.threshold = threshold;
+		}
+
+		@Override
+		public void onStart() {
+			Good good = new Good(asset.getMetal(), quantity);
+			WantTo wantTo = new WantTo(MariaAgent.SELL, good);
+			
+			AuctionRequest auction = new AuctionRequest(new AgentID(getAID().getName()), wantTo, threshold);
+			addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
+		}
 	}
 
 	// AGENT BEHAVIOUR
@@ -217,12 +259,20 @@ public class CaptainAmerica extends MariaAgent {
 						// Update future trend
 						FutureTrend trend = (FutureTrend) mOntology.toObject(cs);
 
-						// Update new trend
-						mCurrentFutureTrend = trend;
-
-						log(FINE, "Future market Trend obtainted:\t" + //
-						"\tMetal: " + trend.getMetal() + //
-						"\tDirection: " + trend.getDirection());//
+						// trend's asset
+						String assetType = Asset.getAssetTypeFromMetalCode(trend.getMetal().getMetalCode());
+						Asset asset = bag.getAsset(assetType);
+						asset.setTrend(trend);
+						
+						if (trend.getDirection().equals(Direction.UP)) {
+							for (int i = 0; i < 3; i++) {
+								addBehaviour(new SplitAndActionBehaviour(myAgent, asset, (int) (bag.getBalance() / 9 / asset.getPrice()), asset.getPrice(), MariaAgent.BUY));
+							}
+						} else if (trend.getDirection().equals(Direction.DOWN)) {
+							for (int i = 0; i < 3; i++) {
+								addBehaviour(new SplitAndActionBehaviour(myAgent, asset, (int) asset.getAmount() / 3, asset.getPrice(), MariaAgent.SELL));
+							}
+						}
 					} else {
 						// Unexpected response received from the info agent.
 						log(SEVERE, "Unexpected response from " + msg.getSender().getName());
@@ -347,7 +397,7 @@ public class CaptainAmerica extends MariaAgent {
 				Action actExpr = new Action(mBrokerService, mAuctionRequest);
 				getContentManager().fillContent(request, actExpr);
 
-				log(FINE, "Request Auction:" + //
+				slog("Request Auction:" + //
 				"\n\t Sell: " + mAuctionRequest.getWantTo().getWantToSell() + //
 				"\n\t Metal: " + mAuctionRequest.getWantTo().getGood().getMetal().getMetalCode() + //
 				"\n\t Quantity: " + mAuctionRequest.getWantTo().getGood().getQuantity() + //
