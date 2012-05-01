@@ -1,7 +1,6 @@
 package agent.trader.user;
 
 import jade.content.abs.AbsPredicate;
-import jade.content.lang.sl.SL0Vocabulary;
 import jade.content.onto.BasicOntology;
 import jade.content.onto.basic.Action;
 import jade.content.onto.basic.Result;
@@ -384,7 +383,7 @@ public class RandomAgent extends UserAgent {
 		protected void handleInform(ACLMessage msg) {
 			try {
 				AbsPredicate absResult = (AbsPredicate) myAgent.getContentManager().extractAbsContent(msg);
-				if (absResult.getTypeName().equals(SL0Vocabulary.RESULT)) {
+				if (absResult.getTypeName().equals(BasicOntology.RESULT)) {
 					// Check the deal
 					Result result = (Result) mOntology.toObject(absResult);
 					if (result.getValue() instanceof Deal) {
@@ -557,7 +556,7 @@ public class RandomAgent extends UserAgent {
 		protected void handleInform(ACLMessage msg) {
 			try {
 				AbsPredicate absResult = (AbsPredicate) myAgent.getContentManager().extractAbsContent(msg);
-				if (absResult.getTypeName().equals(SL0Vocabulary.RESULT)) {
+				if (absResult.getTypeName().equals(BasicOntology.RESULT)) {
 					// Check the deal
 					Result result = (Result) mOntology.toObject(absResult);
 					if (result.getValue() instanceof Deal) {
@@ -670,7 +669,7 @@ public class RandomAgent extends UserAgent {
 
 			try {
 				AbsPredicate absResult = (AbsPredicate) myAgent.getContentManager().extractAbsContent(accept);
-				if (absResult.getTypeName().equals(SL0Vocabulary.RESULT)) {
+				if (absResult.getTypeName().equals(BasicOntology.RESULT)) {
 					// Check the deal
 					Result result = (Result) mOntology.toObject(absResult);
 					if (result.getValue() instanceof Deal) {
