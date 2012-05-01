@@ -1,6 +1,13 @@
 package agent.trader.user.cnpm1.nhom6;
 
+import agent.ontology.AgentID;
+import agent.ontology.AuctionRequest;
+import agent.ontology.Direction;
+import agent.ontology.FutureTrend;
+import agent.ontology.Good;
 import agent.ontology.Metal;
+import agent.ontology.WantTo;
+import agent.trader.user.cnpm1.nhom6.Ozawa.RequestAuctionBehaviour;
 
 public class Asset {
 	
@@ -16,6 +23,9 @@ public class Asset {
 	// prices
 	double goodSellPrice = 0;
 	double goodBuyPrice = 0;
+	
+	// trend
+	FutureTrend trend;
 	
 	/**
 	 * Constructor setup asset type and amount
@@ -65,7 +75,7 @@ public class Asset {
 			this.changes = 0;
 		}
 		
-		Log.updatePrice(type, newPrice);
+		//Log.updatePrice(type, newPrice);
 		this.price = newPrice;
 		this.bag.agent.slog(
 				"Price Updated:" +
@@ -130,6 +140,33 @@ public class Asset {
 
 	public void setGoodBuyPrice(double goodBuyPrice) {
 		this.goodBuyPrice = goodBuyPrice;
+	}
+	
+	/**
+	 * Get asset type from metal code
+	 * @param metalCode
+	 * @return
+	 */
+	public static String getAssetTypeFromMetalCode(String metalCode)
+	{
+		if (metalCode.equals("Gold")) {
+			return "gold";
+		} else if (metalCode.equals("Silver")) {
+			return "silv";
+		}
+		return "plat";
+	}
+
+	public FutureTrend getTrend() {
+		return trend;
+	}
+
+	public void setTrend(FutureTrend trend) {
+		this.trend = trend;
+
+		bag.agent.slog("Future market Trend obtainted:\t" + //
+		"\tMetal: " + trend.getMetal() + //
+		"\tDirection: " + trend.getDirection());//
 	}
 	
 }
