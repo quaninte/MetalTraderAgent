@@ -28,6 +28,7 @@ import agent.ontology.Bid;
 import agent.ontology.CurrentAccount;
 import agent.ontology.CurrentMarketPrice;
 import agent.ontology.Deal;
+import agent.ontology.Direction;
 import agent.ontology.FutureTrend;
 import agent.ontology.GetAccountInfo;
 import agent.ontology.GetLastDeal;
@@ -85,6 +86,7 @@ public class Ozawa extends MariaAgent {
 
 		addBehaviour(new UpdateMarketInfoListener());
 		
+		/*
 		// mua do gia thi truong
 		// each asset
 		for (int i = 0; i < bag.getAssets().size(); i++) {
@@ -93,52 +95,63 @@ public class Ozawa extends MariaAgent {
 			checkPriceOne.setAsset(asset);
 			addBehaviour(checkPriceOne);
 		}
+		*/
 	}
 
 	// AGENT BEHAVIOUR
 	
 	/**
-	 * This behaviour send 10 bids with defined prices range
-	 * @author quanmt
-	 *
+	 * request buy behaviour
 	 */
-	class CheckBestPriceOneAssetBehaviour extends OneShotBehaviour {
-		
-		Asset asset;
+	class RequestBuyBehaviour extends SequentialBehaviour {
 
-		public Asset getAsset() {
-			return asset;
-		}
+		Asset asset;
+		int quantity;
+		double threshold;
 		
-		public void setAsset(Asset asset) {
+		// Constructor
+		public RequestBuyBehaviour(Agent myAgent, Asset asset, int quantity, double threshold) {
+			super(myAgent);
 			this.asset = asset;
+			this.quantity = quantity;
+			this.threshold = threshold;
 		}
 
 		@Override
-		public void action() {
-			for (int i = 0; i < ranges; i++) {
-				int quantity = 1;
-				
-				// send buy request
-				Good good = new Good(asset.getMetal(), quantity);
-				WantTo wantTo = new WantTo(MariaAgent.BUY, good);
-				int percentage = upPercentage[i];
-				double threshold = asset.getPrice() * percentage;
-				
-				AuctionRequest auction = new AuctionRequest(new AgentID(getAID().getName()), wantTo, threshold);
-				addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
-				
-				// send sell request
-				good = new Good(asset.getMetal(), quantity);
-				wantTo = new WantTo(MariaAgent.SELL, good);
-				percentage = downPercentage[i];
-				threshold = asset.getPrice() * percentage;
-				
-				auction = new AuctionRequest(new AgentID(getAID().getName()), wantTo, threshold);
-				addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
-			}
+		public void onStart() {
+			Good good = new Good(asset.getMetal(), quantity);
+			WantTo wantTo = new WantTo(MariaAgent.BUY, good);
+			
+			AuctionRequest auction = new AuctionRequest(new AgentID(getAID().getName()), wantTo, threshold);
+			addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
 		}
+	}
+	
+	/**
+	 * request sell behaviour
+	 */
+	class RequestSellBehaviour extends SequentialBehaviour {
+
+		Asset asset;
+		int quantity;
+		double threshold;
 		
+		// Constructor
+		public RequestSellBehaviour(Agent myAgent, Asset asset, int quantity, double threshold) {
+			super(myAgent);
+			this.asset = asset;
+			this.quantity = quantity;
+			this.threshold = threshold;
+		}
+
+		@Override
+		public void onStart() {
+			Good good = new Good(asset.getMetal(), quantity);
+			WantTo wantTo = new WantTo(MariaAgent.SELL, good);
+			
+			AuctionRequest auction = new AuctionRequest(new AgentID(getAID().getName()), wantTo, threshold);
+			addBehaviour(new RequestAuctionBehaviour(myAgent, auction));
+		}
 	}
 	
 	/**
@@ -373,16 +386,19 @@ public class Ozawa extends MariaAgent {
 						bag.getAsset("silv").updatePrice(cmp.getSilverPrice());
 					} else if (cs.getTypeName().equals(TradingOntology.FUTURE_TREND)) {
 						// Update future trend
-						/*
 						FutureTrend trend = (FutureTrend) mOntology.toObject(cs);
 
-						// Update new trend
-						mCurrentFutureTrend = trend;
-
-						log(FINE, "Future market Trend obtainted:\t" + //
-						"\tMetal: " + trend.getMetal() + //
-						"\tDirection: " + trend.getDirection());//
-						*/
+						// trend's asset
+						String assetType = Asset.getAssetTypeFromMetalCode(trend.getMetal().getMetalCode());
+						Asset asset = bag.getAsset(assetType);
+						asset.setTrend(trend);
+						
+						if (trend.getDirection().equals(Direction.UP)) {
+							addBehaviour(new RequestBuyBehaviour(myAgent, asset, 10, asset.getPrice()));
+						} else if (trend.getDirection().equals(Direction.DOWN)) {
+							addBehaviour(new RequestSellBehaviour(myAgent, asset, asset.getAmount(), asset.getPrice()));
+						}
+						
 					} else {
 						// Unexpected response received from the info agent.
 						log(SEVERE, "Unexpected response from " + msg.getSender().getName());

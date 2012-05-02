@@ -1,4 +1,4 @@
-package agent.trader.user.d08cnpm1.nhom3;
+package agent.trader.user.cnpm1.nhom3;
 
 import jade.content.abs.AbsPredicate;
 import jade.content.onto.BasicOntology;
@@ -40,7 +40,7 @@ import agent.ontology.TradingOntology;
 import agent.ontology.WantTo;
 import agent.trader.UserAgent;
 
-public class Nhom3V1 extends UserAgent {
+public class Nhom3 extends UserAgent {
 	private static final int INFO_UPDATE_INTERVAL_TIME = 50;
 	private static final int LINEAR_CHECK_INTERVAL_TIME = INFO_UPDATE_INTERVAL_TIME * 4;
 	private static final int LINEAR_SAMPLE_NUMBER = 5;
@@ -76,7 +76,7 @@ public class Nhom3V1 extends UserAgent {
 	private double mSilverTrend = 0;
 	
 
-	public Nhom3V1() {
+	public Nhom3() {
 		super(INFO);
 
 		mPlaPrice = 0;

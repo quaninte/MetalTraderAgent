@@ -36,22 +36,17 @@ import agent.ontology.Good;
 import agent.ontology.Metal;
 import agent.ontology.TradingOntology;
 import agent.ontology.WantTo;
-import agent.trader.UserAgent;
-import agent.trader.user.cnpm1.nhom6.Ozawa.RequestAuctionBehaviour;
-import agent.trader.user.cnpm1.nhom6.Ozawa.RequestBuyBehaviour;
-import agent.trader.user.cnpm1.nhom6.Ozawa.RequestSellBehaviour;
 
 public class CaptainAmerica extends MariaAgent {
 
 	private static final Random RANDOM = new Random();
 	
 	AssetBag bag;
-
-	// Current Future Trend
-	private FutureTrend mCurrentFutureTrend;
-
-	// Last agreed deal in the market
-	private Deal mLastAgreedDeal;
+	int activeRequest = 0;
+	int maxRequest = 15;
+	
+	float needSellPercent = (float) 0.9;
+	float needBuyPercent = (float) 1.1;
 
 	public CaptainAmerica() {
 		super(INFO);
@@ -94,7 +89,6 @@ public class CaptainAmerica extends MariaAgent {
 
 		addBehaviour(new UpdateMarketInfoListener());
 
-		/* Remove bidding behaviour
 		MessageTemplate senderMt = MessageTemplate.MatchSender(mBrokerService);
 		MessageTemplate cfpMt = MessageTemplate.MatchPerformative(ACLMessage.CFP);
 		MessageTemplate acceptMt = MessageTemplate.MatchPerformative(ACLMessage.ACCEPT_PROPOSAL);
@@ -102,11 +96,52 @@ public class CaptainAmerica extends MariaAgent {
 		MessageTemplate mt = MessageTemplate.and(senderMt, MessageTemplate.or(cfpMt, MessageTemplate.or(acceptMt, rejectMt)));
 
 		addBehaviour(new BiddingBehaviour(this, mt));
-		*/
 
+		// each asset
+		for (int i = 0; i < bag.getAssets().size(); i++) {
+			Asset asset = bag.getAssets().get(i);
+			FillingTheBlank fillingTheBlank = new FillingTheBlank(this, asset);
+			addBehaviour(fillingTheBlank);
+		}
 	}
 	
 	// Captain actions
+	
+	/**
+	 * This agent keep buying if previous buy failed whenneeding
+	 * @author quanmt
+	 *
+	 */
+	class FillingTheBlank extends OneShotBehaviour {
+		Asset asset;
+		
+		public FillingTheBlank(Agent myAgent, Asset asset) {
+			super(myAgent);
+			this.asset = asset;
+		}
+
+		@Override
+		public void action() {
+			if (asset.need > 0) {
+				System.err.print("\nFilling " + asset.getType());
+				if (asset.needToSell) {
+					System.err.print(" to sell\n");
+					addBehaviour(new SplitAndActionBehaviour(myAgent, asset, asset.getAmount(), asset.getPrice() * needSellPercent, MariaAgent.SELL));
+				} else {
+					System.err.print(" to buy\n");
+					addBehaviour(new SplitAndActionBehaviour(myAgent, asset, asset.getAmount(), asset.getPrice() * needBuyPercent, MariaAgent.BUY));
+				}
+			}
+
+			addBehaviour(new WakerBehaviour(myAgent, 500) {
+				@Override
+				protected void onWake() {
+					addBehaviour(new FillingTheBlank(myAgent, asset));
+				}
+			});
+		}
+		
+	}
 
 	class SplitAndActionBehaviour extends SequentialBehaviour {
 
@@ -130,15 +165,17 @@ public class CaptainAmerica extends MariaAgent {
 				if (totalQuantity == 0) {
 					break;
 				}
-				int quantity = RandomRange.getRandomInteger(6, 10);
+				int quantity = RandomRange.getRandomInteger(1, 15);
 				if (quantity > totalQuantity) {
 					quantity = totalQuantity;
 				}
 				
 				if (sell) {
-					addBehaviour(new RequestSellBehaviour(myAgent, asset, quantity, threshold * 0.95));
+					double subThreshold = quantity * needSellPercent * asset.getPrice();
+					addBehaviour(new RequestSellBehaviour(myAgent, asset, quantity, subThreshold));
 				} else {
-					addBehaviour(new RequestBuyBehaviour(myAgent, asset, quantity, threshold * 1.05));
+					double subThreshold = quantity * needBuyPercent * asset.getPrice();
+					addBehaviour(new RequestBuyBehaviour(myAgent, asset, quantity, subThreshold));
 				}
 				
 				totalQuantity -= quantity;
@@ -265,13 +302,16 @@ public class CaptainAmerica extends MariaAgent {
 						asset.setTrend(trend);
 						
 						if (trend.getDirection().equals(Direction.UP)) {
-							for (int i = 0; i < 3; i++) {
-								addBehaviour(new SplitAndActionBehaviour(myAgent, asset, (int) (bag.getBalance() / 9 / asset.getPrice()), asset.getPrice(), MariaAgent.BUY));
-							}
+							int quantity = (int) (bag.getBalance() / 6 / asset.getPrice());
+							
+							asset.setNeed(quantity);
+							asset.setNeedToSell(MariaAgent.BUY);
+							addBehaviour(new SplitAndActionBehaviour(myAgent, asset, quantity, asset.getPrice(), MariaAgent.BUY));
 						} else if (trend.getDirection().equals(Direction.DOWN)) {
-							for (int i = 0; i < 3; i++) {
-								addBehaviour(new SplitAndActionBehaviour(myAgent, asset, (int) asset.getAmount() / 3, asset.getPrice(), MariaAgent.SELL));
-							}
+							int quantity = asset.getAmount();
+							asset.setNeed(quantity);
+							asset.setNeedToSell(MariaAgent.SELL);
+							addBehaviour(new SplitAndActionBehaviour(myAgent, asset, quantity, asset.getPrice(), MariaAgent.SELL));
 						}
 					} else {
 						// Unexpected response received from the info agent.
@@ -388,6 +428,9 @@ public class CaptainAmerica extends MariaAgent {
 
 		@Override
 		public void onStart() {
+			if (activeRequest >= maxRequest) {
+				return;
+			}
 			ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
 			request.addReceiver(mBrokerService);
 			request.setOntology(mOntology.getName());
@@ -406,6 +449,15 @@ public class CaptainAmerica extends MariaAgent {
 				// Create and add a behaviour to listen for buyer and price
 				// coming back
 				addSubBehaviour(new HandleCompletedAuctionBehaviour(myAgent, request));
+				
+				activeRequest++;
+
+				addBehaviour(new WakerBehaviour(myAgent, 500) {
+					@Override
+					protected void onWake() {
+						activeRequest--;
+					}
+				});
 			} catch (Exception e) {
 				log(e);
 			}
@@ -441,6 +493,10 @@ public class CaptainAmerica extends MariaAgent {
 						"\n\t Metal: " + deal.getGood().getMetal().getMetalCode() + // 
 						"\n\t Quantity: " + deal.getGood().getQuantity() + //
 						"\n\t Value: " + deal.getValue());//
+						
+						String assetType = Asset.getAssetTypeFromMetalCode(deal.getGood().getMetal().getMetalCode());
+						Asset asset = bag.getAsset(assetType);
+						asset.decreaseNeed(deal.getGood().getQuantity());
 
 						// Add behavior to complete the deal
 						addBehaviour(new RequestToCompleteADealBehaviour(myAgent, deal));
@@ -616,7 +672,7 @@ public class CaptainAmerica extends MariaAgent {
 						"\n\t Value: " + deal.getValue());//
 
 						// Update last agreed deal in the whole market
-						mLastAgreedDeal = deal;
+						//mLastAgreedDeal = deal;
 					} else {
 						// Unexpected response received from the info agent.
 						log(SEVERE, "Unexpected response from " + msg.getSender().getName());
@@ -666,28 +722,55 @@ public class CaptainAmerica extends MariaAgent {
 					WantTo wantTo = (WantTo) action.getAction();
 
 					// Print want to
-					log(FINE, "Want to:" + //
+					slog("Want to:" + //
 					"\n\t Sell: " + wantTo.getWantToSell() + //
 					"\n\t Metal: " + wantTo.getGood().getMetal().getMetalCode() + //
 					"\n\t Quantity: " + wantTo.getGood().getQuantity());
+					
+					String assetType = Asset.getAssetTypeFromMetalCode(wantTo.getGood().getMetal().getMetalCode());
+					Asset asset = bag.getAsset(assetType);
 
-					// TODO: TO BE IMPLEMENTED
 					// Decide the bid
 					double proposedBid = 0;
-					if (wantTo.getGood().getMetal().equals(Metal.PLATINUM)) {
-						proposedBid = bag.getAsset("plat").getPrice() * (1 + (RANDOM.nextDouble() * 2 - 1) * 0.2) * wantTo.getGood().getQuantity();
-					} else if (wantTo.getGood().getMetal().equals(Metal.GOLD)) {
-						proposedBid = bag.getAsset("gold").getPrice() * (1 + (RANDOM.nextDouble() * 2 - 1) * 0.2) * wantTo.getGood().getQuantity();
-					} else if (wantTo.getGood().getMetal().equals(Metal.SILVER)) {
-						proposedBid = bag.getAsset("silv").getPrice() * (1 + (RANDOM.nextDouble() * 2 - 1) * 0.2) * wantTo.getGood().getQuantity();
-					} else {
-						log(SEVERE, "Warning: Invalid metalcode");
+					
+					// they want buy, we want sell or reverse
+					if (wantTo.getWantToSell() == !asset.needToSell && asset.need > 0) {
+						if (!wantTo.getWantToSell() && wantTo.getGood().getQuantity() <= asset.getAmount()) {
+							double price;
+							if (asset.needToSell) {
+								price = asset.getPrice() * needSellPercent;
+							} else {
+								price = asset.getPrice() * needBuyPercent;
+							}
+
+							proposedBid = price * wantTo.getGood().getQuantity();
+						}
+					}
+					
+					if (proposedBid == 0) {
+						// we are not needing this product so sell high buy low
+						if (!wantTo.getWantToSell() && wantTo.getGood().getQuantity() <= asset.getAmount()) {
+							//proposedBid = asset.getPrice() * 1 * wantTo.getGood().getQuantity();
+							proposedBid = asset.getPrice() * 1000 * wantTo.getGood().getQuantity();
+							// we never sell
+						} else if (wantTo.getWantToSell() && !(asset.getNeed() > 0 && asset.needToSell )) {
+							proposedBid = asset.getPrice() * 0.5 * wantTo.getGood().getQuantity();
+						} else {
+							if (wantTo.getWantToSell()) {
+								proposedBid = asset.getPrice() * 0.5 * wantTo.getGood().getQuantity();
+							} else {
+								proposedBid = asset.getPrice() * 1000 * wantTo.getGood().getQuantity();
+							}
+						}
 					}
 
-					log(FINE, "Proposing " + proposedBid + " to " + ((wantTo.getWantToSell()) ? "buy" : "sell") + ":" + // 
+					
+					slog("Proposing " + proposedBid + " to " + ((wantTo.getWantToSell()) ? "buy" : "sell") + ":" + // 
 					"\n\t Metal: " + wantTo.getGood().getMetal().getMetalCode() + // 
-					"\n\t Quantity: " + wantTo.getGood().getQuantity());
-
+					"\n\t Market Price: " + asset.getPrice() + 
+					"\n\t Quantity: " + wantTo.getGood().getQuantity() +
+					"\n\t Needing: " + ((asset.needToSell)? "-": "+") + asset.getNeed() + 
+					"\n\t Current Amount: " + asset.getAmount());
 					Bid bid = new Bid(proposedBid);
 					getContentManager().fillContent(propose, bid);
 				} else {
@@ -727,6 +810,21 @@ public class CaptainAmerica extends MariaAgent {
 						"\n\t Metal: " + deal.getGood().getMetal().getMetalCode() + //
 						"\n\t Quantity: " + deal.getGood().getQuantity() + //
 						"\n\t Value: " + deal.getValue());
+						
+						String assetType = Asset.getAssetTypeFromMetalCode(deal.getGood().getMetal().getMetalCode());
+						Asset asset = bag.getAsset(assetType);
+						if (asset.getNeed() > 0) {
+							asset.decreaseNeed(deal.getGood().getQuantity());							
+						} else {
+							/*
+							// if we are buying -> sell all just bought instantly
+							if (deal.getSeller().getName().equals(myAgent.getName())) {
+								addBehaviour(new RequestBuyBehaviour(myAgent, asset, deal.getGood().getQuantity(), deal.getValue() * 0.95));
+							} else {
+								addBehaviour(new RequestSellBehaviour(myAgent, asset, deal.getGood().getQuantity(), deal.getValue() * 1.05));
+							}
+							*/
+						}
 
 						inform.setPerformative(ACLMessage.INFORM);
 
@@ -756,7 +854,7 @@ public class CaptainAmerica extends MariaAgent {
 
 		@Override
 		protected void handleRejectProposal(ACLMessage cfp, ACLMessage propose, ACLMessage reject) {
-			log(FINE, "Proposal rejected");
+			slog("Proposal rejected");
 		}
 	}
 }

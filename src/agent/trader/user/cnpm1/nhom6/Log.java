@@ -12,6 +12,7 @@ public class Log {
 	
 	public static String newTestUrl = "http://localhost/metalslog/test/newTest";
 	public static String updatePriceUrl = "http://localhost/metalslog/test/updateMetal/";
+	public static String addTrend = "http://localhost/metalslog/test/addTrend/";
 	
 	/**
 	 * Create a new test
@@ -44,6 +45,19 @@ public class Log {
 			String content = out.toString();		
 		} catch(Exception e) {
 			System.err.println("No connection for log - update price!");
+			System.err.println("Got an IOException: " + e.getMessage());
+		}
+	}
+
+	public static void addTrend(String type, String direction) {
+
+		try {
+			URL url = new URL(Log.addTrend + type + "/" + direction);
+			InputStreamReader in = new InputStreamReader(url.openStream());  
+			StringWriter out = new StringWriter();  
+			String content = out.toString();		
+		} catch(Exception e) {
+			System.err.println("No connection for log - add trend!");
 			System.err.println("Got an IOException: " + e.getMessage());
 		}
 	}

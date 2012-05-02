@@ -211,8 +211,14 @@ public class Nakata extends MariaAgent {
 						// Update current market price
 						CurrentMarketPrice cmp = (CurrentMarketPrice) mOntology.toObject(cs);
 						bag.getAsset("plat").updatePrice(cmp.getPlatinumPrice());
+						Log.updatePrice(bag.getAsset("plat").getType(), cmp.getPlatinumPrice());
+						
 						bag.getAsset("gold").updatePrice(cmp.getGoldPrice());
+						Log.updatePrice(bag.getAsset("gold").getType(), cmp.getGoldPrice());
+						
 						bag.getAsset("silv").updatePrice(cmp.getSilverPrice());
+						Log.updatePrice(bag.getAsset("silv").getType(), cmp.getSilverPrice());
+						
 					} else if (cs.getTypeName().equals(TradingOntology.FUTURE_TREND)) {
 						// Update future trend
 						FutureTrend trend = (FutureTrend) mOntology.toObject(cs);
@@ -223,6 +229,12 @@ public class Nakata extends MariaAgent {
 						log(FINE, "Future market Trend obtainted:\t" + //
 						"\tMetal: " + trend.getMetal() + //
 						"\tDirection: " + trend.getDirection());//
+						
+						String assetType = Asset.getAssetTypeFromMetalCode(trend.getMetal().getMetalCode());
+						Asset asset = bag.getAsset(assetType);
+						
+						Log.addTrend(asset.getType(), trend.getDirection().toString());
+						
 					} else {
 						// Unexpected response received from the info agent.
 						log(SEVERE, "Unexpected response from " + msg.getSender().getName());

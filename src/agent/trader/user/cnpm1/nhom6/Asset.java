@@ -26,6 +26,8 @@ public class Asset {
 	
 	// trend
 	FutureTrend trend;
+	int need = 0;
+	boolean needToSell;
 	
 	/**
 	 * Constructor setup asset type and amount
@@ -75,15 +77,16 @@ public class Asset {
 			this.changes = 0;
 		}
 		
-		//Log.updatePrice(type, newPrice);
 		this.price = newPrice;
-		this.bag.agent.slog(
+		System.out.println(
 				"Price Updated:" +
 				"\n " + this.type +
 				"\n\tPrice: " + this.price +
 				"\n\tChanges: " + this.changes +
 				"\n\tUp: " + this.priceUpTimes +
 				"\n\tDown: " + this.priceDownTimes +
+				"\n\tNeed: " + this.need +
+				"\n\tNeedTo: " + (this.needToSell?"sell":"buy") +
 				"\n\tChanges from start: " + (this.price / this.startPrice - 1)
 			);
 		//this.bag.agent.slog("Price update\n" + this.type + ": " + this.price + "\n\tChanges: " + this.changes + "\n\tUp: " + this.priceUpTimes + "\tDown: " + this.priceDownTimes);
@@ -167,6 +170,29 @@ public class Asset {
 		bag.agent.slog("Future market Trend obtainted:\t" + //
 		"\tMetal: " + trend.getMetal() + //
 		"\tDirection: " + trend.getDirection());//
+	}
+
+	public int getNeed() {
+		return need;
+	}
+
+	public void setNeed(int need) {
+		this.need = need;
+	}
+
+	public boolean isNeedToSell() {
+		return needToSell;
+	}
+
+	public void setNeedToSell(boolean needToSell) {
+		this.needToSell = needToSell;
+	}
+	
+	public void decreaseNeed(int quantity) {
+		need -= quantity;
+		if (need < 0) {
+			need = 0;
+		}
 	}
 	
 }
